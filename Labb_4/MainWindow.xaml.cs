@@ -20,6 +20,33 @@ namespace Labb_4 {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+
+            RunPlayGame();
+
         }
+
+        private static void RunPlayGame()
+        {
+
+
+
+        }
+
+        private void PlayGameButton_Clicked(object sender, RoutedEventArgs e) {
+            DataContext = new PlayGame();
+        }
+
+        private void EditQuizButton_Clicked(object sender, RoutedEventArgs e) {
+            DataContext = new EditQuiz();
+        }
+
+        private void CreateQuizButton_Clicked(object sender, RoutedEventArgs e) {
+            DataContext = new CreateNewQuizTitle();
+        }
+
+        private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
+            DataContext = new CreateNewQuizQuestions();
+        }
+
     }
 }
