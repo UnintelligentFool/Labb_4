@@ -63,7 +63,7 @@ namespace Labb_4 {
         }
 
         private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
-            DataContext = new CreateNewQuizQuestions();
+            App.Current.MainWindow.DataContext = new CreateNewQuizQuestions();
         }
     }
 }

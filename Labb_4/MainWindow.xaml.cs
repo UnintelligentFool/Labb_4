@@ -44,9 +44,9 @@ namespace Labb_4 {
             DataContext = new CreateNewQuizTitle();
         }
 
-        private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
-            DataContext = new CreateNewQuizQuestions();
-        }
+        //private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
+        //    DataContext = new CreateNewQuizQuestions();
+        //}
 
     }
 }
