@@ -36,7 +36,8 @@
             Click="CreateQuizQuestionsButton_Clicked"
             Content="Create quiz"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Continue on to Create the Questions!" />
         <!--  Click="CreateQuizQuestionsButton_Clicked"  -->
     </Grid>
 </UserControl>

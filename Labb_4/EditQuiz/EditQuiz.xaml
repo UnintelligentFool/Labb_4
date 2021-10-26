@@ -36,13 +36,15 @@
             Background="Aqua"
             Content="Open quiz"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Load a Quiz from a Quiz File" />
         <Button
             Grid.Row="3"
             Grid.Column="4"
             Background="Aqua"
             Content="Save quiz"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Save your Changes to the Quiz" />
     </Grid>
 </UserControl>

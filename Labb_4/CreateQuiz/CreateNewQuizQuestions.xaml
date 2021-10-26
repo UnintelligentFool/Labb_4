@@ -61,13 +61,15 @@
             Background="Aqua"
             Content="Save Quiz"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Save your Quiz!" />
         <Button
             Grid.Row="4"
             Grid.Column="5"
             Background="Aqua"
             Content="Next Question"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Create another Question to your Quiz" />
     </Grid>
 </UserControl>

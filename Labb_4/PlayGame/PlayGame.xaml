@@ -12,55 +12,61 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="35" />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="10" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="10" />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="35" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
-            <RowDefinition />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="5*" />
             <RowDefinition Height="20" />
             <RowDefinition Height="80" />
-            <RowDefinition />
+            <RowDefinition Height="4*" />
         </Grid.RowDefinitions>
         <TextBlock
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="1"
             Background="Cornsilk" />
         <TextBlock
             Grid.Row="1"
+            Grid.RowSpan="3"
             Grid.Column="3"
             Grid.ColumnSpan="5"
             Background="Cornsilk" />
         <!--  MinHeight="200" MinWidth="475"  -->
         <TextBlock
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="9"
             Background="Cornsilk" />
         <Button
-            Grid.Row="3"
+            Grid.Row="5"
             Grid.Column="3"
             Background="Aqua"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Answer One" />
         <Button
-            Grid.Row="3"
+            Grid.Row="5"
             Grid.Column="5"
             Background="Aqua"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Answer Two" />
         <Button
-            Grid.Row="3"
+            Grid.Row="5"
             Grid.Column="7"
             Background="Aqua"
             FontFamily="Bahnschrift SemiBold"
-            FontSize="16" />
+            FontSize="16"
+            ToolTip="Answer Three" />
     </Grid>
 </UserControl>

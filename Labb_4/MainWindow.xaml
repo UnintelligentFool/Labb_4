@@ -49,7 +49,8 @@
                     Content="Play Game"
                     FontFamily="Bahnschrift SemiBold SemiCondensed"
                     FontSize="16"
-                    Foreground="#FF004D9B" />
+                    Foreground="#FF004D9B"
+                    ToolTip="Click to Start the Quiz!" />
                 <Button
                     x:Name="EditQuizButton"
                     Width="95"
@@ -60,7 +61,8 @@
                     Content="Edit Quiz"
                     FontFamily="Bahnschrift SemiBold"
                     FontSize="16"
-                    Foreground="#FF004D9B" />
+                    Foreground="#FF004D9B"
+                    ToolTip="Click to Edit the Quiz!" />
                 <Button
                     x:Name="CreateQuizButton"
                     Width="95"
@@ -71,7 +73,8 @@
                     Content="Create Quiz"
                     FontFamily="Bahnschrift SemiBold"
                     FontSize="16"
-                    Foreground="#FF004D9B" />
+                    Foreground="#FF004D9B"
+                    ToolTip="Click to Create your own Quiz!" />
             </StackPanel>
         </DockPanel>
         <ContentControl
