@@ -28,7 +28,7 @@ namespace Labb_4 {
         private static void RunPlayGame()
         {
 
-
+            App.Current.MainWindow.DataContext = new PlayGame();
 
         }
 
