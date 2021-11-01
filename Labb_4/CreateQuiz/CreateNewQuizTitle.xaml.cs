@@ -27,7 +27,9 @@ namespace Labb_4 {
         }
 
         public CreateNewQuizTitle() {
+
             InitializeComponent();
+
         }
 
         private string SetNewQuizTitle() {
@@ -56,14 +58,36 @@ namespace Labb_4 {
 
         }
 
-        private void CreateTheQuizQuestions(string newQuizTitle) {//void enligt klassdiagram
+        private void CreateTheQuizQuestions() {//(string newQuizTitle) {//void enligt klassdiagram
 
+            //string titleForNewQuiz = TitleTextBox.Text;
 
+            string titleForNewQuiz = TitleTextBox.Text;
+
+            //https://stackoverflow.com/questions/6219454/efficient-way-to-remove-all-whitespace-from-string
+            titleForNewQuiz = string.Join("", titleForNewQuiz.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+            
+            if (!string.IsNullOrEmpty(titleForNewQuiz)) {
+
+                App.Current.MainWindow.DataContext = new CreateNewQuizQuestions(titleForNewQuiz);
+
+            }
+            else {
+
+                titleForNewQuiz = "New_Quiz";
+
+                App.Current.MainWindow.DataContext = new CreateNewQuizQuestions(titleForNewQuiz);
+
+            }
 
         }
 
         private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
-            App.Current.MainWindow.DataContext = new CreateNewQuizQuestions();
+            
+            //App.Current.MainWindow.DataContext = new CreateNewQuizQuestions();
+
+            CreateTheQuizQuestions();
+
         }
     }
 }

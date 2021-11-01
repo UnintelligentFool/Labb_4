@@ -15,6 +15,13 @@ namespace Labb_4 {
             set { _activeQuiz = value; }
         }
 
+        private Quiz _newQuiz;
+
+        public Quiz NewQuiz {
+            get { return _newQuiz; }
+            set { _newQuiz = value; }
+        }
+
         public TheQuizMasterClass()
         {
             

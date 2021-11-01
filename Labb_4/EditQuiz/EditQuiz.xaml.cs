@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,7 +66,9 @@ namespace Labb_4 {
 
         private void ShowQuizFile() {
 
-
+            LoadQuiz showTheQuiz = new LoadQuiz();
+            
+            //EditableDataGrid = new BindableCollection<QuiICollection>(ICollection());
 
         }
 

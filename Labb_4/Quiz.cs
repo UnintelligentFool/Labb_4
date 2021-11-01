@@ -26,11 +26,11 @@ namespace Labb_4 {
         public Quiz()
         {
             
-
+            
 
         }
 
-//        public Question GetRandomQuestion() {
+ //       public Question GetRandomQuestion() {
 
   //          return(string);
 
@@ -38,8 +38,12 @@ namespace Labb_4 {
 
         public void AddQuestion(string statement, int correctAnswer, params string[] answers) {
 
+            //Questions<Question>.Add(<Question>(statement, correctAnswer, answers));
 
-
+            Question questionToBeAdded = new Question(statement, correctAnswer, answers);
+            
+            Questions.Add(questionToBeAdded);
+            
         }
 
         public void RemoveQuestion(int index) {

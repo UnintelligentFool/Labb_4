@@ -26,7 +26,12 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
-        <TextBox
+        <!-- <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="5" />-->
+        <DataGrid
+            x:Name="EditableDataGrid"
             Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="5" />
