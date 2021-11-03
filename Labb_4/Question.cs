@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Labb_4 {
-    class Question : Quiz {
+    public class Question : Quiz {
 
         private string _statement;
 
-        [XmlAttribute("Statement")]
+        //[XmlAttribute("Statement")]
         public string Statement
         {
             get { return _statement; }

@@ -64,9 +64,11 @@ namespace Labb_4 {
 
             string titleForNewQuiz = TitleTextBox.Text;
 
+            //////
             //https://stackoverflow.com/questions/6219454/efficient-way-to-remove-all-whitespace-from-string
             titleForNewQuiz = string.Join("", titleForNewQuiz.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
-            
+            //////
+
             if (!string.IsNullOrEmpty(titleForNewQuiz)) {
 
                 App.Current.MainWindow.DataContext = new CreateNewQuizQuestions(titleForNewQuiz);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,12 @@ namespace Labb_4 {
         public EditQuiz() {
 
             InitializeComponent();
+            DataSet oh = new DataSet();
+            oh.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperherosNiklasVersion.xml");
+
+            EditableDataGrid.ItemsSource = oh.Tables[1].DefaultView;
+
+            //EditableDataGrid
 
         }
 

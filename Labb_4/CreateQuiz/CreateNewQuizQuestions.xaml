@@ -58,7 +58,8 @@
             Grid.RowSpan="6"
             Grid.Column="1"
             Background="Cornsilk"
-            FontSize="16" />
+            FontSize="16"
+            TextWrapping="Wrap" />
         <TextBox
             x:Name="NewAnswerOneTextBox"
             Grid.Row="1"
@@ -88,6 +89,7 @@
             Grid.RowSpan="2"
             Grid.Column="5"
             Background="Aqua"
+            Click="ClickedSaveNewQuiz"
             Content="Save&#x0a;Quiz"
             FontFamily="Bahnschrift SemiBold"
             FontSize="18"
@@ -115,7 +117,8 @@
                 x:Name="RadioButtonAnswerOne"
                 Margin="5"
                 Content="Answer One"
-                Foreground="White" />
+                Foreground="White"
+                IsChecked="True" />
             <RadioButton
                 x:Name="RadioButtonAnswerTwo"
                 Margin="5"

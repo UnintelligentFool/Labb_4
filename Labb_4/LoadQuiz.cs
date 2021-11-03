@@ -17,7 +17,7 @@ namespace Labb_4 {
         private void ShowQuiz()//Load and Show Quiz
         {
 
-
+            
             
         }
 
