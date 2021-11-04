@@ -228,7 +228,7 @@ Detta!                creatingQuizFile.AnswerThree = answerThreeToTheNewQuestion
                 AQuestionList.Add(creatingQuizFile);
 */
 
-                XmlSerializer serializer = new XmlSerializer(AQuestionList.GetType());//serializeAListInstead
+                XmlSerializer serializer = new XmlSerializer(AQuestionList.GetType(), new XmlRootAttribute("Quiz"));//serializeAListInstead
                 
                 System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\");
                 //C:\Users\Niklas\AppData\Local\Niklas Eriksson\Labb_4
