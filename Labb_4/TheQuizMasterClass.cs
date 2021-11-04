@@ -22,13 +22,6 @@ namespace Labb_4 {
             set { _newQuiz = value; }
         }
 
-        //private SaveNewQuizHelper _saveNewQuizHelpers;
-
-        //public SaveNewQuizHelper SaveNewQuizHelpers {
-        //    get { return _saveNewQuizHelpers; }
-        //    set { _saveNewQuizHelpers = value; }
-        //}
-
         public TheQuizMasterClass()
         {
             
@@ -46,15 +39,6 @@ namespace Labb_4 {
             //SaveNewQuizHelpers.AddQuestion(statement, correctAnswer, answers);
 
         }
-
-        //public TheQuizMasterClass(bool areWeHelping, string statement, int correctAnswer, params string[] answers) {
-
-        //    areWeHelping = true;
-
-        //    SaveNewQuizHelpers = new SaveNewQuizHelper();
-        //    SaveNewQuizHelpers.AddQuestion(statement, correctAnswer, answers);
-
-        //}
 
         private void SetActiveQuiz() {
 

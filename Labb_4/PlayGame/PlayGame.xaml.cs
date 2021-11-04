@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Labb_4 {
-    /// <summary>
-    /// Interaction logic for PlayGame.xaml
-    /// </summary>
+
     public partial class PlayGame : UserControl {
 
         private int _questionNumberCounter;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
+using Microsoft.Win32;
 
 namespace Labb_4 {
-    /// <summary>
-    /// Interaction logic for EditQuiz.xaml
-    /// </summary>
+
     public partial class EditQuiz : UserControl {
 
         private string _activeQuiz;
@@ -32,19 +33,44 @@ namespace Labb_4 {
         public EditQuiz() {
 
             InitializeComponent();
-            DataSet oh = new DataSet();
-            oh.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperherosNiklasVersion.xml");
+            DataSet myDataset = new DataSet();
+            myDataset.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\IHaveAchievedVictoryOverCreatingTheQuizFunctionality.xml");//SuperherosNiklasVersion
 
-            EditableDataGrid.ItemsSource = oh.Tables[1].DefaultView;
+            EditableDataGrid.ItemsSource = myDataset.Tables[0].DefaultView;
 
             //EditableDataGrid
 
         }
 
-        private void LoadQuizClick() {
+        private void LoadQuizClick(object sender, RoutedEventArgs e) {
+/*
+            //XAML: Command = "Open" //Kanske
+            OpenFileDialog openAnotherQuiz = new OpenFileDialog();
+            openAnotherQuiz.Filter = "Xml files (*.xml)|*.xml";
+            if (openAnotherQuiz.ShowDialog() == true) {
 
+                //FileStream fileStream = new FileStream(openAnotherQuiz.FileName, FileMode.Open);
 
+                //Quiz aNewQuiz = new Quiz();
 
+                saveAs_XML_Blueprint aNewQuiz = new saveAs_XML_Blueprint();
+
+                XmlSerializer serializer = new XmlSerializer(aNewQuiz.GetType());
+
+                TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" +  + ".xml");
+
+                aNewQuiz = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
+
+                textReader.Close();
+
+                //string hello = aNewQuiz.Questions.Count().ToString();
+
+                //MessageBox.Show(hello);
+
+                //XElement quizFile = XElement.Load(@"quiz.xml");
+
+            }
+*/
         }
 
         private void SaveQuizClick() {
@@ -67,7 +93,10 @@ namespace Labb_4 {
 
         private void LoadSelectedQuizFile() {
 
+            //DataSet myDataset = new DataSet();
+            //myDataset.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" +  + ".xml");
 
+            //EditableDataGrid.ItemsSource = myDataset.Tables[0].DefaultView;
 
         }
 

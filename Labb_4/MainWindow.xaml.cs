@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Labb_4 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
@@ -44,9 +42,6 @@ namespace Labb_4 {
             DataContext = new CreateNewQuizTitle();
         }
 
-        //private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
-        //    DataContext = new CreateNewQuizQuestions();
-        //}
-
     }
+
 }

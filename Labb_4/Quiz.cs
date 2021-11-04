@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
+using System.Xml.Serialization;
 
 namespace Labb_4 {
+
+    [XmlRoot("Quiz")]
     public class Quiz : TheQuizMasterClass {
+
+        [XmlArray("Questions")]
+        [XmlArrayItem("Question", typeof(Question))]
 
         private ICollection<Question> _questions;
 
@@ -22,11 +29,10 @@ namespace Labb_4 {
             get { return _title; }
             set { _title = value; }
         }
+        
+        public Quiz() {
 
-        public Quiz()
-        {
-            
-            
+            Questions = new List<Question>();
 
         }
 
@@ -44,21 +50,11 @@ namespace Labb_4 {
 
             //Är det fortfarande en ICollection och inte en list? Här ser det ut som om jag måste göra så här för att undkomma error:
             //https://stackoverflow.com/questions/42409426/icollection-in-viewmodel-causing-a-null-reference-exception/42409530
-            Questions = new List<Question>();
+            //Questions = new List<Question>();
 
             Questions.Add(questionToBeAdded);
             
         }
-
-        //public void RevealThoughself() {
-
-        //    foreach (var question in Questions) {
-
-        //        question.ToString();
-
-        //    }
-
-        //}
 
         public void RemoveQuestion(int index) {
 

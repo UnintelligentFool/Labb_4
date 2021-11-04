@@ -34,11 +34,15 @@
             x:Name="EditableDataGrid"
             Grid.Row="1"
             Grid.Column="1"
-            Grid.ColumnSpan="5" />
+            Grid.ColumnSpan="5"
+            AlternatingRowBackground="Aqua"
+            CanUserAddRows="True"
+            CanUserDeleteRows="True" />
         <Button
             Grid.Row="3"
             Grid.Column="2"
             Background="Aqua"
+            Click="LoadQuizClick"
             Content="Open quiz"
             FontFamily="Bahnschrift SemiBold"
             FontSize="16"

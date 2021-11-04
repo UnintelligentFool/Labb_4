@@ -14,9 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Labb_4 {
-    /// <summary>
-    /// Interaction logic for CreateNewQuizTitle.xaml
-    /// </summary>
+
     public partial class CreateNewQuizTitle : UserControl {
 
         private string _newQuizTitle;
@@ -58,9 +56,7 @@ namespace Labb_4 {
 
         }
 
-        private void CreateTheQuizQuestions() {//(string newQuizTitle) {//void enligt klassdiagram
-
-            //string titleForNewQuiz = TitleTextBox.Text;
+        private void CreateTheQuizQuestions() {
 
             string titleForNewQuiz = TitleTextBox.Text;
 
@@ -86,8 +82,6 @@ namespace Labb_4 {
 
         private void CreateQuizQuestionsButton_Clicked(object sender, RoutedEventArgs e) {
             
-            //App.Current.MainWindow.DataContext = new CreateNewQuizQuestions();
-
             CreateTheQuizQuestions();
 
         }
