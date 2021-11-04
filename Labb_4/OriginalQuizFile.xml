@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Quiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<saveAs_XML_Blueprint>
+		<Statement>The Man of Steel is another name for which superhero?</Statement>
+		<AnswerOne>Batman</AnswerOne>
+		<AnswerTwo>Superman</AnswerTwo>
+		<AnswerThree>Iron Man</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>What is the real name of Batman?</Statement>
+		<AnswerOne>Bruce Wayne</AnswerOne>
+		<AnswerTwo>Bruce Davis</AnswerTwo>
+		<AnswerThree>Bruce Devon</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Batman protects which city?</Statement>
+		<AnswerOne>Gotham City</AnswerOne>
+		<AnswerTwo>Chicago</AnswerTwo>
+		<AnswerThree>Metropolis</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>How did Spiderman have his superpowers?</Statement>
+		<AnswerOne>He was born with the powers</AnswerOne>
+		<AnswerTwo>He was affected by a chemical explosion</AnswerTwo>
+		<AnswerThree>He was bitten by a spider</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero said that “Who knows what evil lurks in the hearts of men?”</Statement>
+		<AnswerOne>The Thing</AnswerOne>
+		<AnswerTwo>The Shadow</AnswerTwo>
+		<AnswerThree>The Devastator</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>The “Scarlett Speedster” is the nickname of which superhero?</Statement>
+		<AnswerOne>Speedball</AnswerOne>
+		<AnswerTwo>The Flash</AnswerTwo>
+		<AnswerThree>Stardust</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which of the following superheroes says that “Don’t make me angry; you wouldn’t like me when I’m angry”?</Statement>
+		<AnswerOne>Flash</AnswerOne>
+		<AnswerTwo>Batman</AnswerTwo>
+		<AnswerThree>Hulk</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero has super tools such as the magic lasso and bullet-proof bracelets?</Statement>
+		<AnswerOne>Catwoman</AnswerOne>
+		<AnswerTwo>Wonder Woman</AnswerTwo>
+		<AnswerThree>Super Girl</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>In addition to Hal Jordan and Alan Scott, The Green Lantern also uses which name as a secret identity?</Statement>
+		<AnswerOne>Kyle Rayner</AnswerOne>
+		<AnswerTwo>Barry Allen</AnswerTwo>
+		<AnswerThree>Britt Reid</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero has an indestructible shield?</Statement>
+		<AnswerOne>The Red Tornado</AnswerOne>
+		<AnswerTwo>Captain Flag</AnswerTwo>
+		<AnswerThree>Captain America</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which character is usually romantically paired with Batman?</Statement>
+		<AnswerOne>Hawkgirl</AnswerOne>
+		<AnswerTwo>Catwoman</AnswerTwo>
+		<AnswerThree>The Black Canary</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero cannot transform back into the human form anymore?</Statement>
+		<AnswerOne>The Incredible Hulk</AnswerOne>
+		<AnswerTwo>Jacob</AnswerTwo>
+		<AnswerThree>The Thing</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Who was the first female superhero of the Justice Society of America?</Statement>
+		<AnswerOne>Wonder Woman</AnswerOne>
+		<AnswerTwo>Storm</AnswerTwo>
+		<AnswerThree>Elektra</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>What villain got his distinctive appearance from toxic chemicals at a plant?</Statement>
+		<AnswerOne>The Joker</AnswerOne>
+		<AnswerTwo>Doomsday</AnswerTwo>
+		<AnswerThree>Two-Face</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Raymond Palmer is the alter ego of which superhero?</Statement>
+		<AnswerOne>The Green Arrow</AnswerOne>
+		<AnswerTwo>Hawkman</AnswerTwo>
+		<AnswerThree>The Atom</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero says: “With great power, there must also come great responsibility”?</Statement>
+		<AnswerOne>Batman</AnswerOne>
+		<AnswerTwo>The Hulk</AnswerTwo>
+		<AnswerThree>Spiderman</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which superhero is blinded by radioactive components and nicknamed the “Man without fear”?</Statement>
+		<AnswerOne>Green Lantern</AnswerOne>
+		<AnswerTwo>Daredevil</AnswerTwo>
+		<AnswerThree>Wolverine</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>The Beast – a genius superhero – is the medical doctor for:</Statement>
+		<AnswerOne>X-men</AnswerOne>
+		<AnswerTwo>Ice Man</AnswerTwo>
+		<AnswerThree>Shadowcat</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Barbara Gordon, the father of Batgirl, is the … of Gotham City.</Statement>
+		<AnswerOne>The mayor</AnswerOne>
+		<AnswerTwo>The governor</AnswerTwo>
+		<AnswerThree>The police chief</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>The Green Lantern gains his power from which object?</Statement>
+		<AnswerOne>A ring</AnswerOne>
+		<AnswerTwo>A necklace</AnswerTwo>
+		<AnswerThree>Glasses</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which of the following superheros can manipulate and resist the weather?</Statement>
+		<AnswerOne>The Tornado</AnswerOne>
+		<AnswerTwo>The Atom</AnswerTwo>
+		<AnswerThree>Storm</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Wonder Woman comes from which island?</Statement>
+		<AnswerOne>The Paradise Island</AnswerOne>
+		<AnswerTwo>The Emerald Island</AnswerTwo>
+		<AnswerThree>The Eden Isle</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Where does the Green Arrow mainly operate?</Statement>
+		<AnswerOne>Gotham City</AnswerOne>
+		<AnswerTwo>Star City</AnswerTwo>
+		<AnswerThree>New York City</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>During the World War II, Steve Rogers was given a special serum that made him become … to help the US win the war.</Statement>
+		<AnswerOne>The Hulk</AnswerOne>
+		<AnswerTwo>Captain America</AnswerTwo>
+		<AnswerThree>Wolfman</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which member of the Fantastic Four has the tagline as “It’s clobbering time”?</Statement>
+		<AnswerOne>The Thing</AnswerOne>
+		<AnswerTwo>The Green Lantern</AnswerTwo>
+		<AnswerThree>Iron Man</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Debuting in 1965, which superhero is also known as Goliath and Ronin?</Statement>
+		<AnswerOne>Hawkeye</AnswerOne>
+		<AnswerTwo>The Beast</AnswerTwo>
+		<AnswerThree>Iron Man</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which newspaper does Spiderman – Peter Parker – work for?</Statement>
+		<AnswerOne>The Daily Bugle</AnswerOne>
+		<AnswerTwo>The Daily Gothamite</AnswerTwo>
+		<AnswerThree>The Daily Planet</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Elektra made her debut in which Marvel comic?</Statement>
+		<AnswerOne>Green Lantern</AnswerOne>
+		<AnswerTwo>Captain America</AnswerTwo>
+		<AnswerThree>Daredevil</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>What is the name of the archnemesis of the Fantastic Four?</Statement>
+		<AnswerOne>Llan the Sorcerer</AnswerOne>
+		<AnswerTwo>Count Nefaria</AnswerTwo>
+		<AnswerThree>Dr. Doom</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>In an attempt to look more normal, Hellboy did what of the following thing?</Statement>
+		<AnswerOne>Fly down his horns</AnswerOne>
+		<AnswerTwo>Wears contacts</AnswerTwo>
+		<AnswerThree>Hide the right devil hand</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which of the following superheroes is a member of the JLA or Justice League of America?</Statement>
+		<AnswerOne>Aquaman</AnswerOne>
+		<AnswerTwo>Apache Chief</AnswerTwo>
+		<AnswerThree>Storm</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>What are the claws of Wolverine made of?</Statement>
+		<AnswerOne>Cadmium</AnswerOne>
+		<AnswerTwo>Adamantium</AnswerTwo>
+		<AnswerThree>Titanium</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>On the cover of a comic book in 1942, who was punched by Spy Smasher?</Statement>
+		<AnswerOne>Axis leaders</AnswerOne>
+		<AnswerTwo>Captain America</AnswerTwo>
+		<AnswerThree>Uncle Sam</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Doom, the enemy of Fantastic Four, stole the Power Cosmic from which villain?</Statement>
+		<AnswerOne>Count Abyss</AnswerOne>
+		<AnswerTwo>Galactus</AnswerTwo>
+		<AnswerThree>Living Monolith</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Which Spiderman villain shows up two times, first as a secret crime boss and then as a vengeance-bent son?</Statement>
+		<AnswerOne>Green Goblin</AnswerOne>
+		<AnswerTwo>Mysterio</AnswerTwo>
+		<AnswerThree>Venom</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>Wonder Woman was formed by an expert in which field?</Statement>
+		<AnswerOne>Psychology</AnswerOne>
+		<AnswerTwo>Dentistry</AnswerTwo>
+		<AnswerThree>Criminal justice</AnswerThree>
+		<CorrectAnswer>1</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>How does The Fantastic Four get their superpowers?</Statement>
+		<AnswerOne>Evil curse</AnswerOne>
+		<AnswerTwo>Genetic manipulation</AnswerTwo>
+		<AnswerThree>Cosmic rays</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>With the special memory fibre in his cape, Batman is able to …</Statement>
+		<AnswerOne>Communicate with Batmobile</AnswerOne>
+		<AnswerTwo>Slowly fall</AnswerTwo>
+		<AnswerThree>Disappear</AnswerThree>
+		<CorrectAnswer>2</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+	<saveAs_XML_Blueprint>
+		<Statement>In Wonder Woman 1984, what is the civil job of the main character, Diana Prince?</Statement>
+		<AnswerOne>A teacher</AnswerOne>
+		<AnswerTwo>A librarian</AnswerTwo>
+		<AnswerThree>An archaeologist</AnswerThree>
+		<CorrectAnswer>3</CorrectAnswer>
+	</saveAs_XML_Blueprint>
+</Quiz>

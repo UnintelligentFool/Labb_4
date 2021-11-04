@@ -41,11 +41,12 @@ namespace Labb_4 {
         public EditQuiz() {
 
             InitializeComponent();
+/*
             DataSet myDataset = new DataSet();
             myDataset.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\DoesThisChangeRoot.xml");//SuperherosNiklasVersion
 
             EditableDataGrid.ItemsSource = myDataset.Tables[0].DefaultView;
-
+*/
             //EditableDataGrid
 
         }
@@ -130,7 +131,7 @@ namespace Labb_4 {
 
                 textReader.Close();
 
-                MessageBox.Show("Deserialization seems to have worked!\nBut how do I check it?\nAlso, still need to specify file to load...");
+                MessageBox.Show("Deserialization seems to have worked!\nBut how do I check it?");
 
                 DataSet myNewDataset = new DataSet();
                 myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
