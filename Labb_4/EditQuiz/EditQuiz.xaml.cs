@@ -122,7 +122,9 @@ namespace Labb_4 {
 
                 XmlSerializer serializer = new XmlSerializer(aNewQuiz.GetType(), new XmlRootAttribute("Quiz"));
 
-                TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" + "DoesThisChangeRoot" + ".xml");
+                //TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" + "DoesThisChangeRoot" + ".xml");
+
+                TextReader textReader = new StreamReader(openAnotherQuiz.FileName);
                 
                 aNewQuiz = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
 
@@ -131,7 +133,7 @@ namespace Labb_4 {
                 MessageBox.Show("Deserialization seems to have worked!\nBut how do I check it?\nAlso, still need to specify file to load...");
 
                 DataSet myNewDataset = new DataSet();
-                myNewDataset.ReadXml(@Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\WeAreVikings.xml");//SuperherosNiklasVersion
+                myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
                 EditableDataGrid.ItemsSource = myNewDataset.Tables[0].DefaultView;
 
             }
