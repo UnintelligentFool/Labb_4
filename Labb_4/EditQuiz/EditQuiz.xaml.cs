@@ -137,6 +137,8 @@ namespace Labb_4 {
                 myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
                 EditableDataGrid.ItemsSource = myNewDataset.Tables[0].DefaultView;
 
+                
+
             }
 
 
@@ -145,7 +147,8 @@ namespace Labb_4 {
 
         private void SaveQuizClick() {
 
-
+         //   DataSet currentDataSet = (DataSet)EditableDataGrid.DataContext;
+         //   currentDataSet.WriteXml("Snowball.xml", XmlWriteMode.IgnoreSchema);//DatagridWrittenXML.xml
 
         }
 
