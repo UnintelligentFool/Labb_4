@@ -17,11 +17,27 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
 using Microsoft.Win32;
+using System.Xml.Linq;
 using Path = System.IO.Path;
 
 namespace Labb_4 {
 
     public partial class EditQuiz : UserControl {
+        
+        private saveAs_XML_Blueprint _aNewQuiz = new saveAs_XML_Blueprint();
+
+        public saveAs_XML_Blueprint ANewQuiz {
+            get { return _aNewQuiz; }
+            set { _aNewQuiz = value; }
+        }
+
+        private string _modifyQuiz;
+
+        public string ModifyQuiz
+        {
+            get { return _modifyQuiz; }
+            set { _modifyQuiz = value; }
+        }
 
         //DataSet _myDataset = new DataSet();
 
@@ -115,19 +131,50 @@ namespace Labb_4 {
 
 
 
+            /*
+                         OpenFileDialog openAnotherQuiz = new OpenFileDialog();
+                        openAnotherQuiz.Filter = "Xml files (*.xml)|*.xml";
+                        if (openAnotherQuiz.ShowDialog() == true) {
+
+                            saveAs_XML_Blueprint aNewQuiz = new saveAs_XML_Blueprint();
+
+                            XmlSerializer serializer = new XmlSerializer(aNewQuiz.GetType(), new XmlRootAttribute("Quiz"));
+
+                            //TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" + "DoesThisChangeRoot" + ".xml");
+
+                            TextReader textReader = new StreamReader(openAnotherQuiz.FileName);
+
+                            aNewQuiz = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
+
+                            textReader.Close();
+
+                            MessageBox.Show("Deserialization seems to have worked!\nBut how do I check it?");
+
+                            DataSet myNewDataset = new DataSet();
+                            myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
+                            EditableDataGrid.ItemsSource = myNewDataset.Tables[0].DefaultView;
+
+                            ModifyQuiz = openAnotherQuiz.FileName;
+
+             */
+
+
+
+
+
             OpenFileDialog openAnotherQuiz = new OpenFileDialog();
             openAnotherQuiz.Filter = "Xml files (*.xml)|*.xml";
             if (openAnotherQuiz.ShowDialog() == true) {
 
-                saveAs_XML_Blueprint aNewQuiz = new saveAs_XML_Blueprint();
+                ANewQuiz = new saveAs_XML_Blueprint();
 
-                XmlSerializer serializer = new XmlSerializer(aNewQuiz.GetType(), new XmlRootAttribute("Quiz"));
+                XmlSerializer serializer = new XmlSerializer(ANewQuiz.GetType(), new XmlRootAttribute("Quiz"));
 
                 //TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" + "DoesThisChangeRoot" + ".xml");
 
                 TextReader textReader = new StreamReader(openAnotherQuiz.FileName);
                 
-                aNewQuiz = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
+                ANewQuiz = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
 
                 textReader.Close();
 
@@ -136,8 +183,27 @@ namespace Labb_4 {
                 DataSet myNewDataset = new DataSet();
                 myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
                 EditableDataGrid.ItemsSource = myNewDataset.Tables[0].DefaultView;
-
                 
+                ModifyQuiz = openAnotherQuiz.FileName;
+
+                /*
+                TheQuizMasterClass iWantThoseValues = new TheQuizMasterClass(aNewQuiz.Statement, aNewQuiz.CorrectAnswer, new string[] {aNewQuiz.AnswerOne, aNewQuiz.AnswerTwo, aNewQuiz.AnswerThree});
+                iWantThoseValues.NewQuiz.Title = openAnotherQuiz.FileName;
+                
+                return iWantThoseValues;
+                */
+                
+                //newQuizStatements
+
+                //(aNewQuiz.Statement, aNewQuiz.CorrectAnswer, new string[] { aNewQuiz.AnswerOne, aNewQuiz.AnswerTwo, aNewQuiz.AnswerThree });
+                //Title = openAnotherQuiz.FileName;
+
+                //return ();
+                
+            }
+            else {
+
+                //return default;
 
             }
 
@@ -147,8 +213,25 @@ namespace Labb_4 {
 
         private void SaveQuizClick() {
 
-         //   DataSet currentDataSet = (DataSet)EditableDataGrid.DataContext;
-         //   currentDataSet.WriteXml("Snowball.xml", XmlWriteMode.IgnoreSchema);//DatagridWrittenXML.xml
+            //DataSet currentDataSet = (DataSet)EditableDataGrid.DataContext;
+            //currentDataSet.WriteXml(ModifyQuiz, XmlWriteMode.IgnoreSchema);//DatagridWrittenXML.xml
+
+/*            saveAs_XML_Blueprint saveChangesToXML = new saveAs_XML_Blueprint();
+
+            XElement xmlFile = XElement.Load(ModifyQuiz);
+            xmlFile.Add(saveChangesToXML);
+
+            xmlFile.Save(ModifyQuiz);
+            DataSet anotherDataSet = new DataSet();
+            anotherDataSet.ReadXml(ModifyQuiz);
+            EditableDataGrid.ItemsSource = anotherDataSet.Tables[0].DefaultView;
+*/
+            
+
+
+            
+
+
 
         }
 
@@ -189,3 +272,36 @@ namespace Labb_4 {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
