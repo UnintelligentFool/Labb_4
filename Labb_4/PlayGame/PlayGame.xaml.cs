@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +14,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
+using Labb_4;
 
 namespace Labb_4 {
 
     public partial class PlayGame : UserControl {
 
-        private int _questionNumberCounter;
+        private FillMeUpWithXML _quizLoader;
+
+        public FillMeUpWithXML QuizLoader
+        {
+            get { return _quizLoader; }
+            set { _quizLoader = value; }
+        }
+
+        private int _questionNumberCounter = 1;
 
         public int QuestionNumberCounter {
             get { return _questionNumberCounter; }
@@ -31,7 +43,7 @@ namespace Labb_4 {
             set { _totalNumberOfQuestions = value; }
         }
 
-        private int _numberOfCorrectAnswers;
+        private int _numberOfCorrectAnswers = 0;
 
         public int NumberOfCorrectAnswers {
             get { return _numberOfCorrectAnswers; }
@@ -40,6 +52,40 @@ namespace Labb_4 {
 
         public PlayGame() {
             InitializeComponent();
+
+            QuestionNumberTextBlock.Text = "Question:\n" + QuestionNumberCounter;
+
+            CorrectAnswersNumberTextBlock.Text = "Correct answers:\n" + NumberOfCorrectAnswers;
+
+
+
+            //saveAs_XML_Blueprint QuizLoader = new saveAs_XML_Blueprint();
+
+            XmlSerializer serializer = new XmlSerializer(QuizLoader.GetType(), new XmlRootAttribute("Quiz"));
+
+            //TextReader textReader = new StreamReader("OriginalQuizFile.xml");
+
+            TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+
+            //TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+
+            //QuizLoader = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
+            QuizLoader = (FillMeUpWithXML)serializer.Deserialize(textReader);
+
+            textReader.Close();
+
+            MessageBox.Show("Good luck!", "Quiz Starts!");
+
+            TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
+
+            foreach (var question in QuizLoader) {
+
+                Question loadAQuestion = new Question(QuizLoader.Statement, QuizLoader.CorrectAnswer, new string[] {QuizLoader.AnswerOne, QuizLoader.AnswerTwo, QuizLoader.AnswerThree});
+                
+                iAmTheQuizMaster.NewQuiz.Questions.Add(loadAQuestion);
+
+            }
+
         }
 
         private void Play() {

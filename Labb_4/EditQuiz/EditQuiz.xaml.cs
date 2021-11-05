@@ -19,10 +19,19 @@ using System.Xml.Serialization;
 using Microsoft.Win32;
 using System.Xml.Linq;
 using Path = System.IO.Path;
+using System.Runtime.Serialization;
 
 namespace Labb_4 {
 
     public partial class EditQuiz : UserControl {
+
+        private bool _isTheDatagridEmpty = true;
+
+        public bool IsTheDatagridEmpty
+        {
+            get { return _isTheDatagridEmpty; }
+            set { _isTheDatagridEmpty = value; }
+        }
         
         private saveAs_XML_Blueprint _aNewQuiz = new saveAs_XML_Blueprint();
 
@@ -183,6 +192,8 @@ namespace Labb_4 {
                 DataSet myNewDataset = new DataSet();
                 myNewDataset.ReadXml(openAnotherQuiz.FileName);//SuperherosNiklasVersion
                 EditableDataGrid.ItemsSource = myNewDataset.Tables[0].DefaultView;
+
+                IsTheDatagridEmpty = false;
                 
                 ModifyQuiz = openAnotherQuiz.FileName;
 
@@ -192,14 +203,14 @@ namespace Labb_4 {
                 
                 return iWantThoseValues;
                 */
-                
+
                 //newQuizStatements
 
                 //(aNewQuiz.Statement, aNewQuiz.CorrectAnswer, new string[] { aNewQuiz.AnswerOne, aNewQuiz.AnswerTwo, aNewQuiz.AnswerThree });
                 //Title = openAnotherQuiz.FileName;
 
                 //return ();
-                
+
             }
             else {
 
@@ -211,7 +222,7 @@ namespace Labb_4 {
 
         }
 
-        private void SaveQuizClick() {
+        private void SaveQuizClick(object sender, RoutedEventArgs e) {
 
             //DataSet currentDataSet = (DataSet)EditableDataGrid.DataContext;
             //currentDataSet.WriteXml(ModifyQuiz, XmlWriteMode.IgnoreSchema);//DatagridWrittenXML.xml
@@ -226,10 +237,53 @@ namespace Labb_4 {
             anotherDataSet.ReadXml(ModifyQuiz);
             EditableDataGrid.ItemsSource = anotherDataSet.Tables[0].DefaultView;
 */
-            
 
 
-            
+
+            if (IsTheDatagridEmpty == false) {
+
+                //IsTheDatagridEmpty = true;
+
+/*
+ 
+                saveAs_XML_Blueprint saveChangesToXML = new saveAs_XML_Blueprint();
+
+                XElement xmlFile = XElement.Load(ModifyQuiz);
+                xmlFile.Add(saveChangesToXML);
+
+                xmlFile.Save(ModifyQuiz);
+                DataSet anotherDataSet = new DataSet();
+                anotherDataSet.ReadXml(ModifyQuiz);
+                EditableDataGrid.ItemsSource = anotherDataSet.Tables[0].DefaultView;
+ 
+ */                
+
+                /*
+                saveAs_XML_Blueprint saveChangesToXML = new saveAs_XML_Blueprint();
+                saveChangesToXML.Statement = "Hello";
+                saveChangesToXML.CorrectAnswer = 2;
+                saveChangesToXML.AnswerOne = "World";
+                saveChangesToXML.AnswerTwo = "Quiz";
+                saveChangesToXML.AnswerThree = "Human";
+                */
+
+
+                XElement xmlFile = XElement.Load(ModifyQuiz);
+               // xmlFile.Add(saveChangesToXML);
+                
+                xmlFile.Save(ModifyQuiz);
+                DataSet anotherDataSet = new DataSet();
+                anotherDataSet.ReadXml(ModifyQuiz);
+                EditableDataGrid.ItemsSource = anotherDataSet.Tables[0].DefaultView;
+
+
+
+            }
+            else {
+
+                MessageBox.Show("Please load and edit a quiz first, before saving!", "Failed to edit Quiz");
+
+            }
 
 
 
@@ -289,19 +343,132 @@ namespace Labb_4 {
 
 
 
+/*
 
 
+namespace Labb_4 {
+
+    public partial class CreateNewQuizQuestions : UserControl {
+
+        private bool _isQuizInstanceAcceptingQuestionsAllready = false;
+        private bool _areWeSavingRightNow = false;
+
+        private TheQuizMasterClass _quizHolder;
+
+        public TheQuizMasterClass QuizHolder {
+            get { return _quizHolder; }
+            set { _quizHolder = value; }
+        }
+
+        private List<saveAs_XML_Blueprint> _aQuestionList;
+
+        public List<saveAs_XML_Blueprint> AQuestionList {
+            get { return _aQuestionList; }
+            set { _aQuestionList = value; }
+        }
+
+        private saveAs_XML_Blueprint _creatingQuizFile = new saveAs_XML_Blueprint();
+
+        public saveAs_XML_Blueprint CreatingQuizFile {
+            get { return _creatingQuizFile; }
+            set { _creatingQuizFile = value; }
+        }
+
+        private int _counterForAQuestionList = 1;
+
+        public int CounterForAQuestionList {
+
+            get { return _counterForAQuestionList; }
+            set { _counterForAQuestionList = value; }
+        }
+
+        public CreateNewQuizQuestions(string titleForNewQuiz) {
+
+            AQuestionList = new List<saveAs_XML_Blueprint>();
+
+        }
+
+        private void AddQuestion() {
+
+            int correctAnswerToTheNewQuestion = 0;
+
+            if (RadioButtonAnswerOne.IsChecked == true) {
+
+                correctAnswerToTheNewQuestion = 1;
+
+            } else if (RadioButtonAnswerTwo.IsChecked == true) {
+
+                correctAnswerToTheNewQuestion = 2;
+
+            } else if (RadioButtonAnswerThree.IsChecked == true) {
+
+                correctAnswerToTheNewQuestion = 3;
+
+            }
+
+            string newQuestion = NewQuestionTextBox.Text;
+
+            string answerOneToTheNewQuestion = NewAnswerOneTextBox.Text;
+            string answerTwoToTheNewQuestion = NewAnswerTwoTextBox.Text;
+            string answerThreeToTheNewQuestion = NewAnswerThreeTextBox.Text;
+
+            string[] answersToTheNewQuestion = new string[]
+                {answerOneToTheNewQuestion, answerTwoToTheNewQuestion, answerThreeToTheNewQuestion};
+
+            if (_isQuizInstanceAcceptingQuestionsAllready == false) {
+
+                QuizHolder = new TheQuizMasterClass(newQuestion, correctAnswerToTheNewQuestion, answersToTheNewQuestion);
+
+                _isQuizInstanceAcceptingQuestionsAllready = true;
+
+            } else {
+
+                QuizHolder.NewQuiz.Questions.Add(new Question(newQuestion, correctAnswerToTheNewQuestion,
+                    answersToTheNewQuestion));
+
+            }
+
+            NewQuestionTextBox.Text = "";
+            NewAnswerOneTextBox.Text = "";
+            NewAnswerTwoTextBox.Text = "";
+            NewAnswerThreeTextBox.Text = "";
+
+            saveAs_XML_Blueprint creatingQuizFile = new saveAs_XML_Blueprint();
+            creatingQuizFile.Statement = newQuestion;
+            creatingQuizFile.AnswerOne = answerOneToTheNewQuestion;
+            creatingQuizFile.AnswerTwo = answerTwoToTheNewQuestion;
+            creatingQuizFile.AnswerThree = answerThreeToTheNewQuestion;
+            creatingQuizFile.CorrectAnswer = correctAnswerToTheNewQuestion;
+
+            AQuestionList.Add(creatingQuizFile);
+
+            if (_areWeSavingRightNow == true) {
+
+                _areWeSavingRightNow = false;
+
+                XmlSerializer serializer = new XmlSerializer(AQuestionList.GetType(), new XmlRootAttribute("Quiz"));
+
+                System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\");
+                
+                TextWriter textWriter = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\" + NewQuizTitle + ".xml");
+
+                serializer.Serialize(textWriter, AQuestionList);
+
+                textWriter.Close();
 
 
+                string doneEditingMessage = "Your quiz has been edited.";
 
+                string doneEditingTitle = "Quiz Edited";
 
+                MessageBox.Show(doneEditingMessage, doneEditingTitle);
 
+            }
 
+        }
 
+    }
 
+}
 
-
-
-
-
-
+*/

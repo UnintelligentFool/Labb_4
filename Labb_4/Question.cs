@@ -32,6 +32,12 @@ namespace Labb_4 {
             get { return _correctAnswer; }
         }
 
+        public Question() {
+            
+            //FÖr att instansieras på första sidan i foreach loop för att fylla frågan, kanske ta bort om ändrar saker där..
+
+        }
+
         public Question(string statement, int stupidCorrectReadonlyQuestion, params string[] answers) {
 
             _correctAnswer = stupidCorrectReadonlyQuestion;

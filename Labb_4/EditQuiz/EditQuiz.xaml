@@ -51,6 +51,7 @@
             Grid.Row="3"
             Grid.Column="4"
             Background="Aqua"
+            Click="SaveQuizClick"
             Content="Save quiz"
             FontFamily="Bahnschrift SemiBold"
             FontSize="16"

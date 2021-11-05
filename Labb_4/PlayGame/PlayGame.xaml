@@ -33,9 +33,15 @@
             <RowDefinition Height="4*" />
         </Grid.RowDefinitions>
         <TextBlock
+            x:Name="QuestionNumberTextBlock"
             Grid.Row="2"
             Grid.Column="1"
-            Background="Cornsilk" />
+            Padding="0,20,0,0"
+            Background="Cornsilk"
+            FontFamily="Bahnschrift SemiBold"
+            FontSize="26"
+            Foreground="#CC000000"
+            TextAlignment="Center" />
         <TextBlock
             Grid.Row="1"
             Grid.RowSpan="3"
@@ -44,9 +50,15 @@
             Background="Cornsilk" />
         <!--  MinHeight="200" MinWidth="475"  -->
         <TextBlock
+            x:Name="CorrectAnswersNumberTextBlock"
             Grid.Row="2"
             Grid.Column="9"
-            Background="Cornsilk" />
+            Padding="0,20,0,0"
+            Background="Cornsilk"
+            FontFamily="Bahnschrift SemiBold"
+            FontSize="26"
+            Foreground="#CC000000"
+            TextAlignment="Center" />
         <Button
             Grid.Row="5"
             Grid.Column="3"
