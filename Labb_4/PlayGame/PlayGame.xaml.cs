@@ -65,6 +65,7 @@ namespace Labb_4 {
 
             CorrectAnswersNumberTextBlock.Text = "Correct answers:\n" + NumberOfCorrectAnswers;
 
+/*
             QuizLoader = new saveAs_XML_Blueprint();
 
             //saveAs_XML_Blueprint QuizLoader = new saveAs_XML_Blueprint();
@@ -81,6 +82,7 @@ namespace Labb_4 {
             QuizLoader = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
 
             textReader.Close();
+*/
 
             MessageBox.Show("Good luck!", "Quiz Starts!");
 
@@ -134,26 +136,76 @@ namespace Labb_4 {
                         //node.Attributes["theattributename"]?.InnerText
             */
 
-/*
-            //Laddar specificerat object
-            PleaseLoadXML = new XmlDocument();
-            PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+            /*
+                        //Laddar specificerat object
+                        PleaseLoadXML = new XmlDocument();
+                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
 
-            PlayViewsQuestionTextBlock.Text = PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
-*/
+                        PlayViewsQuestionTextBlock.Text = PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
+            */
 
-/*          //Nästan där nu!
+            /*          //Nästan där nu!
+                        PleaseLoadXML = new XmlDocument();
+                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+
+                        for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
+
+                            PlayViewsQuestionTextBlock.Text += i + "\n";
+
+                        }
+
+                        PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
+            */
+
+            /*            PleaseLoadXML = new XmlDocument();
+                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+
+                        for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
+
+                            PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
+                            PlayViewsQuestionTextBlock.Text += "\n";
+
+                        }
+            */
+
             PleaseLoadXML = new XmlDocument();
             PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
 
             for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
 
-                PlayViewsQuestionTextBlock.Text += i + "\n";
+
+                QuizLoader.Statement, 
+                QuizLoader.CorrectAnswer, 
+                new string[] { QuizLoader.AnswerOne, QuizLoader.AnswerTwo, QuizLoader.AnswerThree }
+
+
+
+                Question loadAQuestion = new Question();
+
+
+
+                string questionStatement = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
+
+                int questionCorrectAnswer = int.Parse(PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["CorrectAnswer"].InnerText);
+
+                string questionAnswerOne = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerOne"].InnerText;
+
+                string questionAnswerTwo = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerTwo"].InnerText;
+
+                string questionAnswerThree = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerThree"].InnerText;
+
+                string[] questionAnswers = new[] {questionAnswerOne, questionAnswerTwo, questionAnswerThree};
+
+
+
+                PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
+                PlayViewsQuestionTextBlock.Text += "\n";
+
+                iAmTheQuizMaster.NewQuiz.Questions.Add(loadAQuestion);
+
+
 
             }
-
-            PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
-*/
 
         }
 
