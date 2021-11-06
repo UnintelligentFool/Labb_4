@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Labb_4 {
-    public class FillMeUpWithXML {
+    public class FillMeUpWithXML : IEnumerable {
 
         private string _statement;
 
@@ -41,6 +42,14 @@ namespace Labb_4 {
             get { return _correctAnswer; }
             set { _correctAnswer = value; }
         }
+
+        public IEnumerator GetEnumerator() {
+            throw new NotImplementedException();
+        }
+
+        //public void Add<T>(T value) {
+        //    throw new NotSupportedException("Please remove error?");
+        //}
 
     }
 }

@@ -43,11 +43,13 @@
             Foreground="#CC000000"
             TextAlignment="Center" />
         <TextBlock
+            x:Name="PlayViewsQuestionTextBlock"
             Grid.Row="1"
             Grid.RowSpan="3"
             Grid.Column="3"
             Grid.ColumnSpan="5"
-            Background="Cornsilk" />
+            Background="Cornsilk"
+            TextWrapping="Wrap" />
         <!--  MinHeight="200" MinWidth="475"  -->
         <TextBlock
             x:Name="CorrectAnswersNumberTextBlock"
