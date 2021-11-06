@@ -134,10 +134,26 @@ namespace Labb_4 {
                         //node.Attributes["theattributename"]?.InnerText
             */
 
+/*
+            //Laddar specificerat object
             PleaseLoadXML = new XmlDocument();
             PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
 
-            PlayViewsQuestionTextBlock.Text = PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["AnswerOne"].InnerText;
+            PlayViewsQuestionTextBlock.Text = PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
+*/
+
+/*          //Nästan där nu!
+            PleaseLoadXML = new XmlDocument();
+            PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
+
+            for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
+
+                PlayViewsQuestionTextBlock.Text += i + "\n";
+
+            }
+
+            PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
+*/
 
         }
 
