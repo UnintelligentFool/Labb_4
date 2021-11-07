@@ -38,6 +38,7 @@
             AlternatingRowBackground="Aqua"
             CanUserAddRows="True"
             CanUserDeleteRows="True" />
+        <!--  SelectionChanged="somethingChangedInDatagrid"  -->
         <Button
             Grid.Row="3"
             Grid.Column="2"

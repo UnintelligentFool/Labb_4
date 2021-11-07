@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace Labb_4 {
     public class Question : Quiz {
 
-        private string _statement;
+        private string _statement = "";
 
         //[XmlAttribute("Statement")]
         public string Statement
@@ -17,7 +17,7 @@ namespace Labb_4 {
             set { _statement = value; }
         }
         
-        private string[] _answers;
+        private string[] _answers = new string[3];
 
         public string[] Answers
         {
@@ -25,25 +25,25 @@ namespace Labb_4 {
             set { _answers = value; }
         }
         
-        private readonly int _correctAnswer;
+        private readonly int _correctAnswer;//Sätta till ett värde och sedan ändra så att rätt svar måste ha just den variabeln? -.-
 
         public int CorrectAnswer
         {
             get { return _correctAnswer; }
         }
 
-        public Question() {
+        //public Question() {
             
-            //FÖr att instansieras på första sidan i foreach loop för att fylla frågan, kanske ta bort om ändrar saker där..
+        //    //FÖr att instansieras på första sidan i foreach loop för att fylla frågan, kanske ta bort om ändrar saker där..
 
-        }
+        //}
 
-        public Question(string statement, int stupidCorrectReadonlyQuestion, params string[] answers) {
+        public Question(string statement, int correctQuestion, params string[] answers) : base(String.Empty, 0, new string[]{}) {
 
-            _correctAnswer = stupidCorrectReadonlyQuestion;
             Statement = statement;
+            _correctAnswer = correctQuestion;
             Answers = answers;
-
+            
         }
 
     }

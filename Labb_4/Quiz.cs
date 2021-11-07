@@ -8,13 +8,13 @@ using System.Xml.Serialization;
 
 namespace Labb_4 {
 
-    [XmlRoot("Quiz")]
+    //[XmlRoot("Quiz")]
     public class Quiz : TheQuizMasterClass {
 
-        [XmlArray("Questions")]
-        [XmlArrayItem("Question", typeof(Question))]
+        //[XmlArray("Questions")]
+        //[XmlArrayItem("Question", typeof(Question))]
 
-        private ICollection<Question> _questions;
+        private ICollection<Question> _questions = new List<Question>();
 
         public ICollection<Question> Questions
         {
@@ -30,9 +30,9 @@ namespace Labb_4 {
             set { _title = value; }
         }
         
-        public Quiz() {
+        public Quiz(string statement, int correctAnswer, params string[] answers) {
 
-            Questions = new List<Question>();
+            //Questions = new List<Question>();
 
         }
 

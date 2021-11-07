@@ -86,7 +86,7 @@ namespace Labb_4 {
 
             MessageBox.Show("Good luck!", "Quiz Starts!");
 
-            TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
+            //TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
 
             /*            foreach (var question in QuizLoader) {
 
@@ -168,42 +168,33 @@ namespace Labb_4 {
                         }
             */
 
+            TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
+            
             PleaseLoadXML = new XmlDocument();
             PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
 
             for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
-
-
-                QuizLoader.Statement, 
-                QuizLoader.CorrectAnswer, 
-                new string[] { QuizLoader.AnswerOne, QuizLoader.AnswerTwo, QuizLoader.AnswerThree }
-
-
-
-                Question loadAQuestion = new Question();
-
-
-
-                string questionStatement = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
+                
+                string questionStatement = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText.ToString();
 
                 int questionCorrectAnswer = int.Parse(PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["CorrectAnswer"].InnerText);
 
-                string questionAnswerOne = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerOne"].InnerText;
+                string questionAnswerOne = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerOne"].InnerText.ToString();
 
-                string questionAnswerTwo = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerTwo"].InnerText;
+                string questionAnswerTwo = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerTwo"].InnerText.ToString();
 
-                string questionAnswerThree = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerThree"].InnerText;
+                string questionAnswerThree = PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["AnswerThree"].InnerText.ToString();
 
                 string[] questionAnswers = new[] {questionAnswerOne, questionAnswerTwo, questionAnswerThree};
 
+                Question loadAQuestion = new Question(questionStatement, questionCorrectAnswer, questionAnswers);
 
+                //iAmTheQuizMaster.NewQuiz.Questions.Add(loadAQuestion);
 
-                PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
-                PlayViewsQuestionTextBlock.Text += "\n";
+                //iAmTheQuizMaster.NewQuiz() = new Question();
 
-                iAmTheQuizMaster.NewQuiz.Questions.Add(loadAQuestion);
-
-
+                //PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
+                //PlayViewsQuestionTextBlock.Text += "\n";
 
             }
 
