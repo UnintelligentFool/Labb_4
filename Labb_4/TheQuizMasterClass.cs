@@ -31,13 +31,9 @@ namespace Labb_4 {
 
         public TheQuizMasterClass(string statement, int correctAnswer, params string[] answers) {
 
-            //Quiz NewQuiz = new Quiz();
             NewQuiz = new Quiz(statement, correctAnswer, answers);
             NewQuiz.AddQuestion(statement, correctAnswer, answers);
-
-            //SaveNewQuizHelpers = new SaveNewQuizHelper();
-            //SaveNewQuizHelpers.AddQuestion(statement, correctAnswer, answers);
-
+            
         }
 
         private void SetActiveQuiz() {

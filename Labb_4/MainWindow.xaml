@@ -19,9 +19,6 @@
         <DataTemplate x:Name="createNewQuizTitleView" DataType="{x:Type local:CreateNewQuizTitle}">
             <local:CreateNewQuizTitle DataContext="{Binding}" />
         </DataTemplate>
-        <!-- <DataTemplate x:Name="createNewQuizQuestionsView" DataType="{x:Type local:CreateNewQuizQuestions}">
-            <local:CreateNewQuizQuestions DataContext="{Binding}" />
-        </DataTemplate>-->
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>

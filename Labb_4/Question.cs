@@ -10,7 +10,6 @@ namespace Labb_4 {
 
         private string _statement = "";
 
-        //[XmlAttribute("Statement")]
         public string Statement
         {
             get { return _statement; }
@@ -25,18 +24,12 @@ namespace Labb_4 {
             set { _answers = value; }
         }
         
-        private readonly int _correctAnswer;//Sätta till ett värde och sedan ändra så att rätt svar måste ha just den variabeln? -.-
+        private readonly int _correctAnswer;
 
         public int CorrectAnswer
         {
             get { return _correctAnswer; }
         }
-
-        //public Question() {
-            
-        //    //FÖr att instansieras på första sidan i foreach loop för att fylla frågan, kanske ta bort om ändrar saker där..
-
-        //}
 
         public Question(string statement, int correctQuestion, params string[] answers) : base(String.Empty, 0, new string[]{}) {
 

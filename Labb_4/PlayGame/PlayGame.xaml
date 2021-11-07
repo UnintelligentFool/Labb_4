@@ -50,7 +50,6 @@
             Grid.ColumnSpan="5"
             Background="Cornsilk"
             TextWrapping="Wrap" />
-        <!--  MinHeight="200" MinWidth="475"  -->
         <TextBlock
             x:Name="CorrectAnswersNumberTextBlock"
             Grid.Row="2"
