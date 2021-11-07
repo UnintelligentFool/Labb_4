@@ -514,9 +514,38 @@ namespace Labb_4 {
 
 
 
+
+
+                //Kopierar en rad till alla rader! Nästan där men samtidigt så långt bort....
+                for (int i = 0; i < EditableDataGrid.Items.Count; i++) {
+
+                    DataRowView datagridRow = EditableDataGrid.SelectedItem as DataRowView;
+
+                    if (datagridRow != null) {
+
+                        //SelectedCells gör att det blir samma hela tiden... -.-
+                        editingQuizFile.Statement = datagridRow[0].ToString();
+                        editingQuizFile.AnswerOne = datagridRow[1].ToString();
+                        editingQuizFile.AnswerTwo = datagridRow[2].ToString();
+                        editingQuizFile.AnswerThree = datagridRow[3].ToString();
+
+                        var beingConverted = datagridRow[4].ToString();//Upset person: Who let that Age of Empires II monk in?!
+                        int conversionComplete = int.Parse(beingConverted);//Now calm person: Let us pray to the lord almighty.
+
+                        editingQuizFile.CorrectAnswer += conversionComplete;
+
+                        editingQuizList.Add(editingQuizFile);
+
+                    }
+
+                }
+
+
+
+
+
+                /*
                 
-
-
                 //Kopierar en rad till alla rader! Nästan där men inte samtidigt....
                 for (int i = 0; i < EditableDataGrid.Items.Count; i++) {
 
@@ -540,6 +569,8 @@ namespace Labb_4 {
                     }
 
                 }
+
+                */
 
 
 
