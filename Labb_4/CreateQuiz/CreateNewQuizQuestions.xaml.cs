@@ -77,9 +77,6 @@ namespace Labb_4 {
 
             InitializeComponent();
 
-            //this.DataContext = new DatacontextMessenger();
-            //this.DataContext = new TheQuizMasterClass();
-
             NewQuestionNumber = 1;
 
             NewQuizTitle = titleForNewQuiz;
@@ -88,24 +85,6 @@ namespace Labb_4 {
             NewQuestionNumberTextBlock.Text = $"Question number: {NewQuestionNumber}";
 
             AQuestionList = new List<saveAs_XML_Blueprint>();
-
-        }
-
-        private void OpenQuizFile() { //(?????) Utdaterad?
-
-
-
-        }
-
-        private void ModifyNewQuiz() {//(?????) Utdaterad?
-
-
-
-        }
-
-        private void ClickedNewQuiz() {
-
-
 
         }
 
@@ -119,24 +98,6 @@ namespace Labb_4 {
         private void ClickedAddQuestion(object sender, RoutedEventArgs e) {
 
             AddQuestion();
-
-        }
-
-        private void ClickedSwitchToPlayQuiz() {
-
-
-
-        }
-
-        private void ClickedSwitchToEditQuiz() {
-
-
-
-        }
-
-        private void QuizNew() {
-
-
 
         }
 
@@ -155,7 +116,7 @@ namespace Labb_4 {
 
             if (RadioButtonAnswerOne.IsChecked == true) {
 
-                correctAnswerToTheNewQuestion = 1;//Skall jag använda 1 eller 0? Kan vara värt att se på längre fram... Array startar med 0 och list med 1 om jag skall använda det för att ta fram ett värde på det sättet.
+                correctAnswerToTheNewQuestion = 1;
 
             } else if (RadioButtonAnswerTwo.IsChecked == true) {
 
@@ -167,7 +128,6 @@ namespace Labb_4 {
 
             } else {
 
-                //Om tid/tålamod över, ge felmeddelande, kräv att ett val görs... Kanske. Messagebox?
                 correctAnswerToTheNewQuestion = 0;
 
                 //MessageBox och denna else skall nog inte spela roll längre sedan jag gjorde att ett svar alltid är checked men bara utifall...
@@ -218,17 +178,7 @@ namespace Labb_4 {
 
                 _areWeSavingRightNow = false;
 
-/*                saveAs_XML_Blueprint creatingQuizFile = new saveAs_XML_Blueprint();
-                creatingQuizFile.Statement = newQuestion;
-                creatingQuizFile.AnswerOne = answerOneToTheNewQuestion;
-                creatingQuizFile.AnswerTwo = answerTwoToTheNewQuestion;
-Detta!                creatingQuizFile.AnswerThree = answerThreeToTheNewQuestion;
-                creatingQuizFile.CorrectAnswer = correctAnswerToTheNewQuestion;
-
-                AQuestionList.Add(creatingQuizFile);
-*/
-
-                XmlSerializer serializer = new XmlSerializer(AQuestionList.GetType(), new XmlRootAttribute("Quiz"));//serializeAListInstead
+                XmlSerializer serializer = new XmlSerializer(AQuestionList.GetType(), new XmlRootAttribute("Quiz"));
                 
                 System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\");
                 //C:\Users\Niklas\AppData\Local\Niklas Eriksson\Labb_4
@@ -250,53 +200,5 @@ Detta!                creatingQuizFile.AnswerThree = answerThreeToTheNewQuestion
 
         }
 
-        private void NewQuestion() {
-
-
-
-        }
-
-        private void SaveNewQuiz() {
-
-
-
-        }
-
-        private void SaveSuccessfulFeedback() {
-
-
-
-        }
-
-        private void ShowNewQuiz() {
-
-
-
-        }
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-/*
- *
-https://stackoverflow.com/questions/7502658/how-to-serialize-property-of-type-icollectiont-while-using-entity-framework
- *
-private string ConvertClassToXMLString<T>(T classObject) {
-                    using (var stream = new MemoryStream()) {
-                        var serializer = new DataContractSerializer(classObject.GetType());
-                        serializer.WriteObject(stream, classObject);
-
-                        return Encoding.UTF8.GetString(stream.ToArray());
-                    }
-                }
- *
- */

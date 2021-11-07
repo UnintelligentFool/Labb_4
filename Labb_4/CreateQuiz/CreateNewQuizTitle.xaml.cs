@@ -30,32 +30,6 @@ namespace Labb_4 {
 
         }
 
-        private string SetNewQuizTitle() {
-
-            //Skall den returnera eller ta in en string alternativt bådadera?
-
-            return ("");
-
-        }
-
-        private void ClickedCreateQuestions(string newQuizTitle) {
-
-
-
-        }
-
-        private void ClickedSwitchToPlayQuiz() {
-
-
-
-        }
-
-        private void ClickedSwitchToEditQuiz() {
-
-
-
-        }
-
         private void CreateTheQuizQuestions() {
 
             string titleForNewQuiz = TitleTextBox.Text;

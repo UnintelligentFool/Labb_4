@@ -65,108 +65,7 @@ namespace Labb_4 {
 
             CorrectAnswersNumberTextBlock.Text = "Correct answers:\n" + NumberOfCorrectAnswers;
 
-/*
-            QuizLoader = new saveAs_XML_Blueprint();
-
-            //saveAs_XML_Blueprint QuizLoader = new saveAs_XML_Blueprint();
-
-            XmlSerializer serializer = new XmlSerializer(QuizLoader.GetType(), new XmlRootAttribute("Quiz"));
-
-            //TextReader textReader = new StreamReader("OriginalQuizFile.xml");
-
-            TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-            //TextReader textReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-            //QuizLoader = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
-            QuizLoader = (saveAs_XML_Blueprint)serializer.Deserialize(textReader);
-
-            textReader.Close();
-*/
-
-            MessageBox.Show("Good luck!", "Quiz Starts!");
-
-            //TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
-
-            /*            foreach (var question in QuizLoader) {
-
-                            Question loadAQuestion = new Question(QuizLoader.Statement, QuizLoader.CorrectAnswer, new string[] {QuizLoader.AnswerOne, QuizLoader.AnswerTwo, QuizLoader.AnswerThree});
-
-                            iAmTheQuizMaster.NewQuiz.Questions.Add(loadAQuestion);
-
-                        }
-            */
-
-            /*
-                        //Visar en Question och allting i samma string
-                        PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        foreach (XmlNode node in PleaseLoadXML.DocumentElement.ChildNodes) {
-
-                            PlayViewsQuestionTextBlock.Text = node.InnerText;
-
-                        }
-            */
-
-            /*
-                        //Visar ALLT i xml-filen i en låååååång string.
-                        PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        foreach (XmlNode node in PleaseLoadXML) {
-
-                            PlayViewsQuestionTextBlock.Text = node.InnerText;
-
-                        }
-            */
-
-            /*
-                        //Hämtar ett specifikt värde! (Får ändra, sätta in det i loopen, göra om.)
-                        PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        foreach (XmlNode node in PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["AnswerOne"]) {
-
-                            PlayViewsQuestionTextBlock.Text = node.InnerText;
-
-                        }
-
-                        //XmlNode node = doc.DocumentElement.SelectSingleNode("/book/title");
-                        //node.Attributes["theattributename"]?.InnerText
-            */
-
-            /*
-                        //Laddar specificerat object
-                        PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        PlayViewsQuestionTextBlock.Text = PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
-            */
-
-            /*          //Nästan där nu!
-                        PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
-
-                            PlayViewsQuestionTextBlock.Text += i + "\n";
-
-                        }
-
-                        PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(0)["Statement"].InnerText;
-            */
-
-            /*            PleaseLoadXML = new XmlDocument();
-                        PleaseLoadXML.Load(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString() + "\\Niklas Eriksson\\Labb_4\\SuperHerosQuiz.xml");
-
-                        for (int i = 0; i < PleaseLoadXML.DocumentElement.GetElementsByTagName("Statement").Count; i++) {
-
-                            PlayViewsQuestionTextBlock.Text += PleaseLoadXML.DocumentElement.ChildNodes.Item(i)["Statement"].InnerText;
-                            PlayViewsQuestionTextBlock.Text += "\n";
-
-                        }
-            */
+            MessageBox.Show("Good luck!", /*"Quiz Starts!"*/ "Quiz is still not done! Curses!");
 
             TheQuizMasterClass iAmTheQuizMaster = new TheQuizMasterClass();
             
@@ -200,12 +99,6 @@ namespace Labb_4 {
 
         }
 
-        private void Play() {
-
-
-
-        }
-
         private void ClickedAnswerOne() {
 
 
@@ -219,18 +112,6 @@ namespace Labb_4 {
         }
 
         private void ClickedAnswerThree() {
-
-
-
-        }
-
-        private void ClickedSwitchToCreateQuiz() {
-
-
-
-        }
-
-        private void ClickedSwitchToEditQuiz() {
 
 
 
@@ -256,30 +137,3 @@ namespace Labb_4 {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//https://stackoverflow.com/questions/642293/how-do-i-read-and-parse-an-xml-file-in-c
-XmlDocument doc = new XmlDocument();
-doc.Load("c:\\temp.xml");
-
-foreach (XmlNode node in doc.DocumentElement.ChildNodes) {
-
-    string text = node.InnerText; //or loop through its children as well
-
-}
-*/
